@@ -52,7 +52,7 @@ let createNewUser = async (req, res) =>{
 
 let deleteUser = async (req, res) =>{
     let userId = req.body.userId
-    await pool.execute('delete form user where id = ?', [userId])
+    await pool.execute('delete FROM `users` WHERE `id` = ?', [userId])
     return res.redirect('/')
 
 }

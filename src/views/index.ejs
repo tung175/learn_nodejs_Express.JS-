@@ -55,6 +55,7 @@
                                 <button type="button"> <a href="/detail/user/<%= dataUser[i].id %>"
                                         target="_blank">Detail</a></button>
                                 <form action="/delete-user" method="POST">
+                                    <input type="text" name="userId" hidden value="<%= dataUser[i].id%>">
                                     <button type="submit">Delete</button>
                                 </form>
                                 <form action="/edit-user/<%= dataUser[i].id %>" method="GET">
